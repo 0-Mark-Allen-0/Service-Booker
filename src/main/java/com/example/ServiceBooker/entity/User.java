@@ -31,4 +31,11 @@ public class User extends BaseEntity{
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Appointment> appointments;
 
+    //Logic:
+    /*
+    1. One user can have many appointments
+    2. Provider has availability slots which is linked with user
+    3. Appointment links User and Provider to an Availability Slot
+     */
+
 }
